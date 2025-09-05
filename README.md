@@ -1,11 +1,14 @@
 # wow-guild-recruitment
 
 ## Purpose and Value
-Simple guild recruitment board for WoW.
+Simple guild recruitment board for World of Warcraft. Users can post guild ads with guild name, role and realm.
 
 ## User Stories
-- As a visitor, I can see a list of guild/player/user ads So I can find actrive guilds/players.
-- As a logged-in user, I can create/edit/delete my own ad so I can manage recruitment.
+- As a visitor, I can see a list of guild ads so I can find active guilds.
+- As a logged-in user, I can create a guild ad (guild name, role, realm) so I can recruit players.
+- As the ad owner, I can edit my ad so I can correct details without creating a new one.
+- As the ad owner, I can delete my ad so I can remove outdated posts.
+- As a user, I can log in/out so I can manage my ads.
 
   ## Wireframes
   (Will be added in /docs/wireframes)
