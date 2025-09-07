@@ -16,8 +16,25 @@ def guild_list(request):
 
 
 def guild_detail(request, slug):
-    """
-Show details for one guild.
-    """
-guild = get_object_or_404(Guild, slug=slug, published=True)
-return render(request, "guilds/guild_detail.html", {"guild": guild})
+    """Show details for one published guild by slug, or 404 if not found."""
+    guild = get_object_or_404(Guild, slug=slug, published=True)
+    return render(request, "guilds/guild_detail.html", {"guild": guild})
+
+def application_create(request, guild_id):
+    """Create a simple application for a specific guild.
+    save, show a message, then redirect back to the guild detail."""
+    guild = get_object_or_404(Guild, id=guild_id, published=True)
+    
+    if request.method == "POST":
+        form = ApplicationForm(request.POST)
+        if form.is_valid():
+            app = form.save(commit=False) 
+            app.guild = guild
+            app.save()
+            messages.success(request, "Thanks! Your application was sent.")
+            return redirect("guild_detail", slug=guild.slug)
+        else:
+            form = ApplicationForm()
+            
+        return render(request, "guilds/application_form.html", {"form": form, "guild": guild})
+            
