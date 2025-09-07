@@ -23,6 +23,7 @@ def guild_detail(request, slug):
 def application_create(request, guild_id):
     """Create a simple application for a specific guild.
     save, show a message, then redirect back to the guild detail."""
+    
     guild = get_object_or_404(Guild, id=guild_id, published=True)
     
     if request.method == "POST":
