@@ -3,7 +3,7 @@ from django import forms
 from .models import Application
 
 class ApplicationForm(forms.ModelForm):
-    """Beginner-friendly form to apply to a guild.
+    """form to apply to a guild.
     
     """
     class Meta:
