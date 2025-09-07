@@ -24,3 +24,10 @@ Simple guild recruitment board for World of Warcraft. Users can post guild ads w
 
   (Will add Heroku steps later)
   
+## What i have done today -07
+- Created app 'guilds' and added to installed_apps
+- added templates folder and base layout
+- added guild and application models; ran migrations
+- registered models in admin and added test data
+-implemented list, detail, and apllly flow
+- added simple search (q=).
