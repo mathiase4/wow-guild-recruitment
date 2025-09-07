@@ -31,3 +31,85 @@ Simple guild recruitment board for World of Warcraft. Users can post guild ads w
 - registered models in admin and added test data
 -implemented list, detail, and apllly flow
 - added simple search (q=).
+
+
+
+## Setup & Settings
+
+Added crispy_forms and crispy_bootstrap5 to INSTALLED_APPS.
+
+Set TEMPLATES_DIR = BASE_DIR / "templates" and pointed TEMPLATES['DIRS'] to it.
+
+Enabled WhiteNoise static storage: STORAGES['staticfiles'] = CompressedManifestStaticFilesStorage.
+
+Kept local DEBUG = True. For production I will use a separate prod branch where DEBUG = False.
+
+Added STATIC_ROOT, STATICFILES_DIRS, and created static/css/style.css.
+
+## URLs
+
+Project urls include the app: path("", include("guilds.urls")).
+
+App urls now include a root route ("") so / shows the guild list.
+
+Kept clean order: specific paths first, slug route last.
+
+## Templates
+
+Fixed template lookup by moving base.html to templates/base.html.
+
+base.html loads Bootstrap and {% load static %}.
+
+guild_list.html shows a search box and loops over guilds.
+
+guild_detail.html shows guild data and an Apply button.
+
+application_form.html uses {% load crispy_forms_tags %} and {{ form|crispy }}.
+
+## Forms & Views
+
+Added ApplicationForm (fields: character_name, class_spec, discord, message).
+
+application_create view saves an application and shows a success message.
+
+Staff-only CRUD for applications:
+
+application_edit (update).
+
+application_delete (confirm + delete).
+
+Fixed search bug in list view (name__icontains and simple Q filter).
+
+## Static files
+
+Created static/css/style.css and linked it in base.html.
+
+## Git (micro commits)
+
+feat: add ApplicationForm and connect create view
+
+fix: move base.html to templates/
+
+feat: show search + loop on guild list
+
+feat: staff-only application edit/delete
+
+chore: settings cleanup (templates dir, whitenoise, static)
+
+docs: add simple docstrings
+
+## Why I did these changes
+
+Root route: Avoid 404 — / should show content.
+
+base.html in templates/: Template inheritance works everywhere.
+
+Crispy + Bootstrap: Clean forms and responsive UI (meets P3 “responsive design”).
+
+Staff-only CRUD for Applications: Meets P3 CRUD requirement and access control.
+
+WhiteNoise + static config: Required for Heroku static files.
+
+Local DEBUG only: Easy learning locally; safe deploy with a prod branch (DEBUG=False).
+
+How to run (local)
