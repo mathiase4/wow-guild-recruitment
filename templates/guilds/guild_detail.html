@@ -16,6 +16,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Guild Info</h5>
+                <a href="{% url 'application_create' guild_id=guild.id %}" class="btn btn-primary w-100 mb-3">Apply to this Guild</a>
                 <p>
 <strong>Owner:</strong>
 {% if guild.owner %}
