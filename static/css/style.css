@@ -21,3 +21,7 @@ a {
     color: #c0c0c0 !important;
 
 }
+/* Override Bootstrap's default muted text color */
+.text-muted {
+    color: #acacac !important; /* En ljusare gråfärg som syns bättre */
+}
