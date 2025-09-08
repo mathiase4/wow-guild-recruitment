@@ -8,6 +8,7 @@ urlpatterns = [
     path("create/", views.guild_create, name="guild_create"),
     path("guilds/<slug:slug>/", views.guild_detail, name="guild_detail"), # detail page
     path("guilds/<slug:slug>/edit/", views.guild_edit, name="guild_edit"), # edit page
+    path("guilds/<slug:slug>/delete/", views.guild_delete, name="guild_delete"), # delete route a guild
     path("apply/<int:guild_id>/", views.application_create, name="application_create") # apply form
     
     
