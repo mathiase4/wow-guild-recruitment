@@ -1,6 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Guilds</h1>
+<h1>Guild Recruitment</h1>
+<p>Browse the list of guilds looking for new members.</p>
+<hr>
+{% if guilds %}
+<div class="row">
+    {% for guild in guilds %}
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ guild.name }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ guild.realm }}</h6>
+                <p class="card-text">
+                    <span class="badge bg-primary">{{ guild.get_faction_display }}</span>
+                </p>
+                <a href="{% url 'guild_detail' slug=guild.slug %}" class="btn btn-primary">Details</a>
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<p>No Guilds are currently recruiting. Why not post an ad?</p>
+{% endif %}
 
 
 {% endblock %}
