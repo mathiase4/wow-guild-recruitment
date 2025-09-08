@@ -39,8 +39,8 @@ def application_create(request, guild_id):
             
         return render(request, "guilds/application_form.html", {"form": form, "guild": guild})
     
-    @login_required
-    def guild_create(request):
+@login_required
+def guild_create(request):
         """ Renders the form to create a new guild
         and handles the form submission by a logged-in user.
         """
