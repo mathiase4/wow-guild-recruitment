@@ -101,3 +101,27 @@ def guild_edit(request, slug):
         "guild": guild
     }
     return render(request, "guilds/guild_form.html", context)
+
+@login_required
+def guild_delete(request, slug):
+    """ fetches a guild ad by slug for deletion,
+    validates that the logged in user is the owner aswell,
+    and handles the deletion confirmation."""
+    guild = get_object_or_404(Guild, slug=slug)
+    
+    #only owner can see the delete confirmation 
+    if guild.owner != request.user:
+        messages.error(request, "You are not authorized to delete this ad.")
+        return redirect('guild_list')
+    
+    if request.method == "POST":
+        #user confirms by submitting the form, delete the object.
+        guild.delete()
+        messages.success(request, f"The guild ad '{guild.name}' has been deleted.")
+        return redirect('guild_list')
+    
+    context = {
+        "guild": guild
+    }
+    return render(request, "guilds/guild_confirm_delete.html", context)
+    
