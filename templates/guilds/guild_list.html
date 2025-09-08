@@ -4,10 +4,16 @@
 <p>Browse the list of guilds looking for new members.</p>
 <hr>
 {% if guilds %}
-<div class="row">
+<div class="row g-3">
     {% for guild in guilds %}
     <div class="col-md-4 mb-4">
         <div class="card guild-card">
+            {% if guild.image %}
+            
+<img src="{{ guild.image.url }}" class="card-img-top" alt="{{ guild.name }}">
+            
+{% endif %}
+
             <div class="card-body">
                 <h5 class="card-title">{{ guild.name }}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">{{ guild.realm }}</h6>

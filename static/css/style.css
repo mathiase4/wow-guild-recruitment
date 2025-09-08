@@ -15,6 +15,14 @@ a {
 
     border: 1px solid #ffb700;
     color: #ffffff;
+    min-height: 250px;
+    
+
+}
+.card-img-top {
+    height: 150px;
+    object-fit: cover;
+    width: 100%;
 }
 
 .guild-card .text-muted {
@@ -25,3 +33,4 @@ a {
 .text-muted {
     color: #acacac !important; /* En ljusare gråfärg som syns bättre */
 }
+
