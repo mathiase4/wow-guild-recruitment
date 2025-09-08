@@ -35,10 +35,13 @@ class Guild(models.Model):
         """Show a friendly name in admin, logs and shells.""" 
         return self.name
     
-def save(self, *args, **kwargs):
-    """ auto-generate a slug from the guild name if one doesn't exist."""
-    if not self.slug:
-        self.slug = slugify(self.name)
+    def save(self, *args, **kwargs):
+        """
+        Auto-generate a slug from the guild name if one doesn't exist.
+        """
+        if not self.slug:
+            self.slug = slugify(self.name)
+        
         super().save(*args, **kwargs)
     
     # Application model
