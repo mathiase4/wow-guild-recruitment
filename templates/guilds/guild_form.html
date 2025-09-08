@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <h2>Create New Guild Ad</h2>
+        <p>Fill out the form below to post your guild recruitment ad.</p>
+        <hr>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            {{ form|crispy }}
+
+            <button type="submit" class="btn btn-primary mt-3">
+                Create Ad
+            </button>
+        </form>
+
+    </div>
+</div>
+{% endblock %}
