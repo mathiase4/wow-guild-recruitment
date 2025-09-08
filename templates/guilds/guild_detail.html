@@ -1,7 +1,34 @@
 {% extends "base.html" %}
 {% block content  %}
+<div class="row">
+    <div class="col-md-8">
 
-<h1>Guild detail</h1>
+<h2>{{ guild.name }}</h2>
+<p>
+<span class="badge bg-primary">{{ guild.get_faction_display }}</span>
+<span class="text-muted">{{ guild.realm }} - {{ guild.region }}</span>
+</p>
+<hr>
+<p>{{ guild.description|linebreaks }}</p>
+    </div>
 
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Guild Info</h5>
+                <p>
+<strong>Owner:</strong>
+{% if guild.owner %}
+{{ guild.owner.username }}
+{% else %}
+No owner
+{% endif %}
+<br>
+<strong>Posted:</strong> {{ guild.created_on|date:"d M Y" }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
