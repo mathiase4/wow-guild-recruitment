@@ -52,6 +52,7 @@ def guild_create(request):
             guild = form.save(commit=False)
             guild.owner = request.user
             guild.save()
+            guild.refresh_from_db()
             
             messages.success(request, "Your guild ad was created successfully!")
             return redirect('guild_detail', slug=guild.slug)
