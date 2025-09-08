@@ -1,0 +1,10 @@
+body {
+    background-color: #1a1a1a; 
+    color: #f2f2f2; /* light grey color for all body texts */
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff; /* pure white for headings to make them stand out */
+}
+a {
+    color: #ffb700; /* a wow theme classic gold color for links */
+}
