@@ -41,23 +41,28 @@ def application_create(request, guild_id):
     
 @login_required
 def guild_create(request):
-        """ Renders the form to create a new guild
-        and handles the form submission by a logged-in user.
-        """
-        if request.method == "POST":
-            form = GuildForm(request.POST)
-            if form.is_valid():
-                guild = form.save(commit=False)
-                guild.owner = request.user
-                guild.save()
-                
-                messages.success(request, "Your guild ad was created successfully!")
-                return redirect('guild_detail', slug=guild.slug)
-            else:
-                form = GuildForm()
-                
-            context = {
-                "form": form
-            }
-            return render(request, "guilds/guild_form.html", context)
+    """
+    Renders the form to create a new guild
+    and handles the form submission by a logged-in user.
+    """
+    if request.method == "POST":
+        # This block runs only when the user submits the form
+        form = GuildForm(request.POST)
+        if form.is_valid():
+            guild = form.save(commit=False)
+            guild.owner = request.user
+            guild.save()
+            
+            messages.success(request, "Your guild ad was created successfully!")
+            return redirect('guild_detail', slug=guild.slug)
+    else:
+        # This block runs when user just visits the page 
+        form = GuildForm()
+        
+    
+    # It run for GET requests, or if a POST form is invalid.
+    context = {
+        "form": form
+    }
+    return render(request, "guilds/guild_form.html", context)
             
