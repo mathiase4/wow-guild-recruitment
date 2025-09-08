@@ -18,7 +18,8 @@ class GuildForm(forms.ModelForm):
     class Meta:
         model = Guild
         #List the fields a user can fill out
-        fields = [ 'name', 'faction', 'region', 'realm', 'description']
+        fields = [ 'name', 'faction', 'region', 'realm', 'description', 'image']
+        
         
         
 

@@ -47,7 +47,7 @@ def guild_create(request):
     """
     if request.method == "POST":
         # This block runs only when the user submits the form
-        form = GuildForm(request.POST)
+        form = GuildForm(request.POST, request.FILES)
         if form.is_valid():
             guild = form.save(commit=False)
             guild.owner = request.user
@@ -87,7 +87,7 @@ def guild_edit(request, slug):
     
     if request.method == "POST":
         # this populates the form with submitted data
-        form = GuildForm(request.POST, instance=guild)
+        form = GuildForm(request.POST, request.FILES, instance=guild)
         if form.is_valid():
             form.save()
             messages.success(request, "Your guild ad has been updated successfully!")

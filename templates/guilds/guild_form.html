@@ -7,7 +7,7 @@
         <p>Fill out the form below to post your guild recruitment ad.</p>
         <hr>
 
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
 
             {{ form|crispy }}

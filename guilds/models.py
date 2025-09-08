@@ -21,6 +21,7 @@ class Guild(models.Model):
     region = models.CharField(max_length=40, blank=True)   # EU OR US
     realm = models.CharField(max_length=80, blank=True)
     description = models.TextField(blank=True)
+    image = models.ImageField(upload_to='guild_images/', blank=True, null=True)
     published = models.BooleanField(default=True)
     #show/hide in public list
     owner = models.ForeignKey(User , on_delete=models.SET_NULL, null=True,
