@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from .models import Guild
-from .forms import ApplicationForm
-
+from .forms import ApplicationForm, GuildForm
+from django.contrib.auth.decorators import login_required # what user is logged in
 #create your views here
 
 def guild_list(request):
@@ -38,4 +38,26 @@ def application_create(request, guild_id):
             form = ApplicationForm()
             
         return render(request, "guilds/application_form.html", {"form": form, "guild": guild})
+    
+    @login_required
+    def guild_create(request):
+        """ Renders the form to create a new guild
+        and handles the form submission by a logged-in user.
+        """
+        if request.method == "POST":
+            form = GuildForm(request.POST)
+            if form.is_valid():
+                guild = form.save(commit=False)
+                guild.owner = request.user
+                guild.save()
+                
+                messages.success(request, "Your guild ad was created successfully!")
+                return redirect('guild_detail', slug=guild.slug)
+            else:
+                form = GuildForm()
+                
+            context = {
+                "form": form
+            }
+            return render(request, "guilds/guild_form.html", context)
             
