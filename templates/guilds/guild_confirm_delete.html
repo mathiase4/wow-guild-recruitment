@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+<div class="col-md-8 offset-md-2">
+    <h2>Delete Guild Ad</h2>
+    <hr>
+    <p>Are you sure you want to delete the guild ad for <strong>"{{ guild.name }}"</strong>?</p>
+    <p>This action cannot be undone.</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Yes, Delete</button>
+        <a href="{% url 'guild_detail' slug=guild.slug %}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+</div>
+{% endblock %}
