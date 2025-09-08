@@ -8,3 +8,10 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: #ffb700; /* a wow theme classic gold color for links */
 }
+
+/* guild card styling background and golden color */
+.guild-card {
+    background-color: rgba(0, 0, 0, 0.4);
+
+    border: 1px solid #ffb700;
+}
