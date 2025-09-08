@@ -72,30 +72,26 @@ def guild_create(request):
 
 @login_required
 def guild_edit(request, slug):
-    """
-    Fetches a guild ad by slug for editing, validates that the logged-in user is the owner,
-    and fix the form submission.
-
-    """
+    """Displays a form to edit an existing guild ad and handles submission."""
     
-    # the security check if the logged-in user is the owner
+    guild = get_object_or_404(Guild, slug=slug)
+
+    # Is the logged-in user the owner of this guild???
     if guild.owner != request.user:
         messages.error(request, "You are not authorized to edit this ad.")
         return redirect('guild_list')
-    
-    #similar to the create view
-    
+
     if request.method == "POST":
-        # this populates the form with submitted data
+        # Populate the form with submitted data and the specific guild instance
         form = GuildForm(request.POST, request.FILES, instance=guild)
         if form.is_valid():
             form.save()
             messages.success(request, "Your guild ad has been updated successfully!")
             return redirect('guild_detail', slug=guild.slug)
     else:
-        #prefill the form with the guilds data
+        # When just visiting the page, pre-fill the form with the guild's data
         form = GuildForm(instance=guild)
-        
+
     context = {
         "form": form,
         "guild": guild

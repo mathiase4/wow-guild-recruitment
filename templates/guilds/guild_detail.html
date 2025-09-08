@@ -29,7 +29,7 @@ No owner
                 </p>
 
                 {% if user.is_authenticated and guild.owner == user %}
-                <a href="{% url 'guild_edit' slug=guild.slug %} class="btn btn-secondary mt-2">Edit Guild</a>
+                <a href="{% url 'guild_edit' slug=guild.slug %}" class="btn btn-secondary mt-2">Edit Guild</a>
                 <a href="{% url 'guild_delete' slug=guild.slug %}" class="btn btn-danger mt-2">Delete Guild</a>
                 {% endif %}
             </div>
