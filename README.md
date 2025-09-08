@@ -100,16 +100,24 @@ docs: add simple docstrings
 
 ## Why I did these changes
 
-Root route: Avoid 404 — / should show content.
+Root route: Avoid 404 should show content.
 
 base.html in templates/: Template inheritance works everywhere.
 
-Crispy + Bootstrap: Clean forms and responsive UI (meets P3 “responsive design”).
+Crispy + Bootstrap: Clean forms and responsive UI.
 
 Staff-only CRUD for Applications: Meets P3 CRUD requirement and access control.
 
 WhiteNoise + static config: Required for Heroku static files.
 
-Local DEBUG only: Easy learning locally; safe deploy with a prod branch (DEBUG=False).
+## Features
 
-How to run (local)
+The site is a full CRUD (Create, Read, Update, Delete) application that allows users to manage guild recruitment ads for World of Warcraft. It also includes an application feature for Game-loving interested players.
+
+### Existing Features
+* **Read:** Any visitor can see a list of all published guild ads and view the details for each one.
+* **Create:** A logged-in user can create a new guild ad. The ad is automatically assigned to them as the owner.
+* **Update:** The owner of a guild ad can edit its details. Access is restricted so users cannot edit ads they do not own.
+* **Delete:** The ad owner can delete their ad. This action requires a confirmation step to prevent accidental deletion. Access is restricted to the ad owner.
+* **Apply:** Any visitor can apply to a guild via a simple form on the guild's detail page.
+* **Admin Management:** The site administrator can manage all aspects of guilds via the Django Admin panel.
