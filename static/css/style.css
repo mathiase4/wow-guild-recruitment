@@ -14,4 +14,10 @@ a {
     background-color: rgba(0, 0, 0, 0.4);
 
     border: 1px solid #ffb700;
+    color: #ffffff;
+}
+
+.guild-card .text-muted {
+    color: #c0c0c0 !important;
+    
 }
