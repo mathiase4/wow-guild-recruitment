@@ -26,6 +26,10 @@ No owner
 <br>
 <strong>Posted:</strong> {{ guild.created_on|date:"d M Y" }}
                 </p>
+
+                {% if user.is_authenticated and guild.owner == user %}
+                <a href="{% url 'guild_edit' slug=guild.slug %} class="btn btn-secondary mt-2">Edit Guild</a>
+                {% endif %}
             </div>
         </div>
     </div>
