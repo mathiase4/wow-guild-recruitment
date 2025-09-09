@@ -168,3 +168,6 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+"""I took help from dennis Ivy's youtube video for this to understand, the password reset email video. He uses the console email backend in development so i copied that setup. """
+EMAIL_BACKEND = 'django.core.email.backends.console.EmailBackend'
