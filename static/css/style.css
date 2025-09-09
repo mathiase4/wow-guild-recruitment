@@ -100,7 +100,10 @@ a {
 
 }
 /*//*
-
+ /** Form Styling **/ 
+ /*
+ /*
+ /*
 
 /* makes the information text when you trying to sign up text more readable */
 .form-text {
@@ -108,7 +111,15 @@ a {
 
 }
 
-/* makes the form inputs little bit smaller example login name, email, password input . */
+/* makes form inputs and labels a bit smaller. */
 .form-control, label {
     font-size: 0.9rem;
+}
+/* makes the form inputs little bit smaller example login name, email, password input */
+.form-control {
+    max-width: 400px;
+}
+
+.form-container {
+    max-width: 450px;
 }
