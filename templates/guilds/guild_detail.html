@@ -5,7 +5,7 @@
 
 <h2>{{ guild.name }}</h2>
 <p>
-<span class="badge bg-primary">{{ guild.get_faction_display }}</span>
+<span class="badge {% if guild.faction == 'ALLIANCE' %}bg-primary{% else %}bg-danger{% endif %}">{{ guild.get_faction_display }}</span>
 <span class="text-muted">{{ guild.realm }} - {{ guild.region }}</span>
 </p>
 <hr>
