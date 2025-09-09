@@ -15,11 +15,19 @@ a {
 .guild-card  {
     background-color: rgba(0, 0, 0, 0.4);
     padding: 1rem;
-    border: 1px solid #ffb700;
     color: #ffffff;
     
     
 
+}
+/* FACTION change color theme */
+.guild-card.faction-alliance {
+    border: 1px solid #007bff; /* make the ally border blue */
+
+}
+
+.guild-card.faction-horde {
+    border: 1px solid #dc3545; /* make horde border red */
 }
 
 .guild-card .card-body {
@@ -48,3 +56,36 @@ a {
     object-fit: cover;
     background-color: #000000;
 }
+/* create so our buttons look more like wow 3d feel, button style section till *//* */
+.btn {
+    border-radius: 4px;
+    border: 1px solid #000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    background-image: linear-gradient(to bottom, #0d6efd, #0a58ca);
+    border-color: #0a58ca;
+}
+
+.btn-primary:hover {
+    background-image: linear-gradient(to bottom, #3b8aff, #0d6efd);
+    border-color: #0b5ed7;
+}
+/* style for warning buttons (gold feeling e.g "Details" */
+.btn-warning {
+    background-color: #ffb700;
+    background-image: linear-gradient(to bottom, #fcc233, #e6a500);
+    border-color: #cca000;
+    color: #1a1a1a;
+}
+
+.btn-warning:hover {
+    background-image: linear-gradient(to bottom, #ffd466, #ffb700);
+    border-color: #cca000;
+    color: #1a1a1a;
+
+}
+/*//*

@@ -7,7 +7,8 @@
 <div class="row g-3">
     {% for guild in guilds %}
     <div class="col-md-4 mb-4">
-        <div class="card guild-card">
+        <!-- got help here with the faction style from chatgpt, make different color for horde or ally. -->
+        <div class="card guild-card faction-{{ guild.faction|lower }}">
             {% if guild.image %}
             
 <img src="{{ guild.image.url }}" class="card-img-top guild-card-img"  alt="{{ guild.name }}">
@@ -18,9 +19,9 @@
                 <h5 class="card-title">{{ guild.name }}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">{{ guild.realm }}</h6>
                 <p class="card-text">
-                    <span class="badge bg-primary">{{ guild.get_faction_display }}</span>
+                    <span class="badge {% if guild.faction == 'ALLIANCE' %}bg-primary{% else %}bg-danger{% endif %}">{{ guild.get_faction_display }}</span>
                 </p>
-                <a href="{% url 'guild_detail' slug=guild.slug %}" class="btn btn-primary">Details</a>
+                <a href="{% url 'guild_detail' slug=guild.slug %}" class="btn btn-warning">Details</a>
 
             </div>
         </div>
