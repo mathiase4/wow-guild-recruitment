@@ -21,11 +21,9 @@ def guild_detail(request, slug):
     return render(request, "guilds/guild_detail.html", {"guild": guild})
 
 def application_create(request, guild_id):
-    """Create a simple application for a specific guild.
-    save, show a message, then redirect back to the guild detail."""
-    
+    """Handles the creation of a new application for a specific guild."""
     guild = get_object_or_404(Guild, id=guild_id, published=True)
-    
+
     if request.method == "POST":
         form = ApplicationForm(request.POST)
         if form.is_valid():
@@ -34,10 +32,12 @@ def application_create(request, guild_id):
             app.save()
             messages.success(request, "Thanks! Your application was sent.")
             return redirect("guild_detail", slug=guild.slug)
-        else:
-            form = ApplicationForm()
-            
-        return render(request, "guilds/application_form.html", {"form": form, "guild": guild})
+    else:
+        # This is for when a user just visits the page (GET request)
+        form = ApplicationForm()
+
+    # This part is now correctly unindented and will run for GET requests
+    return render(request, "guilds/application_form.html", {"form": form, "guild": guild})
     
 @login_required
 def guild_create(request):
