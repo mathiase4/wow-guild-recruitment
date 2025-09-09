@@ -116,8 +116,9 @@ a {
     font-size: 0.9rem;
 }
 /* makes the form inputs little bit smaller example login name, email, password input */
-.form-control {
-    max-width: 400px;
+.form-control,
+.form-select {
+    max-width: 500px;
 }
 
 .form-container {
