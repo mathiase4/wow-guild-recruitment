@@ -26,7 +26,7 @@
     <ul class="navbar-nav ms-auto">
       {% if user.is_authenticated %}
       <li class="nav-item">
-        <a class"nav-link" href="{% url 'guild_create' %}">Post a Guild Ad</a>
+        <a class="btn btn-warning btn-sm" href="{% url 'guild_create' %}">Create Guild</a>
       </li>
       {% endif %}
     </ul>
