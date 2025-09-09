@@ -12,8 +12,12 @@
 
             {{ form|crispy }}
 
-            <button type="submit" class="btn btn-primary mt-3">
+            <button type="submit" class="btn btn-warning mt-3">
+                {% if guild %}
+                Save Changes
+                {% else %}
                 Create Ad
+                {% endif %}
             </button>
         </form>
 
