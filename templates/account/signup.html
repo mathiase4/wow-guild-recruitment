@@ -2,25 +2,30 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-
 <div class="row">
     <div class="col-md-6 offset-md-3">
         <div class="card guild-card">
             <div class="card-body">
-                <h2 class="card-title text-center">Login</h2>
+                <h2 class="card-title text-center">Sign Up</h2>
                 <hr>
-                <form method="POST" action="{% url 'account_login' %}">
+                
+                <form method="POST" action="{% url 'account_signup' %}">
                     {% csrf_token %}
                     {{ form|crispy }}
                     <div class="text-center">
-                    <button class="btn btn-warning btn-lg mt-2" type="submit">Login</button>
-                    </div>
+                    <button class="btn btn-warning btn-lg mt-2" type="submit">Sign Up</button>
+                    </div>  
+                
                 </form>
                 <p class="text-center mt-3">
-                    Don't have an account?
-                    <a href="{% url 'account_signup' %}">Sign Up</a>
+                    Already have an account?
+                    <a href="{% url 'account_login' %}">Login</a>
+
+     
+
                 </p>
             </div>
+            
         </div>
     </div>
 </div>
