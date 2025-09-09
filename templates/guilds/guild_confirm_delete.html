@@ -10,7 +10,7 @@
     <form method="POST">
         {% csrf_token %}
         <button type="submit" class="btn btn-danger">Yes, Delete</button>
-        <a href="{% url 'guild_detail' slug=guild.slug %}" class="btn btn-secondary">Cancel</a>
+        <a href="{% url 'guild_detail' slug=guild.slug %}" class="btn btn-warning">Cancel</a>
     </form>
 </div>
 </div>
