@@ -14,10 +14,10 @@
     </div>
 
     <div class="col-md-4">
-        <div class="card">
+        <div class="card guild-card">
             <div class="card-body">
                 <h5 class="card-title">Guild Info</h5>
-                <a href="{% url 'application_create' guild_id=guild.id %}" class="btn btn-primary w-100 mb-3">Apply to this Guild</a>
+                <a href="{% url 'application_create' guild_id=guild.id %}" class="btn btn-warning w-100 mb-3">Apply to this Guild</a>
                 <p>
 <strong>Owner:</strong>
 {% if guild.owner %}
@@ -30,7 +30,7 @@ No owner
                 </p>
 
                 {% if user.is_authenticated and guild.owner == user %}
-                <a href="{% url 'guild_edit' slug=guild.slug %}" class="btn btn-secondary mt-2">Edit Guild</a>
+                <a href="{% url 'guild_edit' slug=guild.slug %}" class="btn btn-warning mt-2">Edit Guild</a>
                 <a href="{% url 'guild_delete' slug=guild.slug %}" class="btn btn-danger mt-2">Delete Guild</a>
                 {% endif %}
             </div>

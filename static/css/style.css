@@ -4,7 +4,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    
+
     color: #f2f2f2; /* light grey color for all body texts */
     font-family: "Cinzel", serif; /* use google font in styling  */
 }
@@ -25,6 +25,12 @@ a {
     
 
 }
+
+ /* NAVBAR STYLING */
+
+ .navbar.bg-dark {
+    background-color: #000000 !important;
+ }
 /* FACTION change color theme */
 .guild-card.faction-alliance {
     border: 1px solid #007bff; /* make the ally border blue */
