@@ -10,15 +10,22 @@ a {
 }
 
 /* guild card styling background and golden color */
-.guild-card {
+.guild-card  {
     background-color: rgba(0, 0, 0, 0.4);
-
+    padding: 1rem;
     border: 1px solid #ffb700;
     color: #ffffff;
-    min-height: 250px;
+    
     
 
 }
+
+.guild-card .card-body {
+    padding: 1rem;
+
+}
+
+
 .card-img-top {
     height: 150px;
     object-fit: cover;
@@ -31,6 +38,11 @@ a {
 }
 /* Override Bootstrap's default muted text color */
 .text-muted {
-    color: #acacac !important; /* En ljusare gråfärg som syns bättre */
+    color: #acacac !important; /* a whiter color that makes you see through the dark background color */
 }
 
+.guild-card-img {
+    height: 400px;
+    object-fit: contain;
+    background-color: #000000;
+}
