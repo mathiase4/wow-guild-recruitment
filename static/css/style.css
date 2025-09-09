@@ -42,7 +42,7 @@ a {
 }
 
 .guild-card-img {
-    height: 400px;
-    object-fit: contain;
+    height: 550px;
+    object-fit: cover;
     background-color: #000000;
 }
