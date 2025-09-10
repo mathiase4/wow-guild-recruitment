@@ -25,11 +25,11 @@
   <div class="container">
     <a class="navbar-brand" href="{% url 'guild_list' %}">
       <img src="{% static 'images/therealnavbarphoto.svg' %}" alt="Wow Logo" width="30" height="30" class="d-inline-block align-text-top me-2">WoW Guild Recruitment</a>
-      <button class="navbar=toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar=toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-  <div class="collapse navbar-collapse" id="navbarNav">
+  <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav ms-auto">
       {% if user.is_authenticated %}
       <li class="nav-item me-2">
@@ -59,7 +59,7 @@
   {% endif %}
   {% block content %}{% endblock %}
 </div>
-<button id="back-to-top-btn" title="Go to top">Back Up</button>
+<button id="back-to-top-btn" title="Go to top">↑</button>
 <footer class="footer-container mt-auto">
   <div class="container text-center">
     <!-- django trick, never make the django copyright text old!, always updated!, help from google search on this one.-->
