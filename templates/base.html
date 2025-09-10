@@ -56,11 +56,13 @@
   {% endif %}
   {% block content %}{% endblock %}
 </div>
+<button id="back-to-top-btn" title="Go to top">Back Up</button>
 <footer class="footer-container mt-auto">
   <div class="container text-center">
     <!-- django trick, never make the django copyright text old!, always updated!, help from google search on this one.-->
   <p class="text-muted">  Copyright © Mathiase4 {% now "Y" %} | Wow Guild Recruitment</p>
   </div>
 </footer>
+<script src="{% static 'js/custom.js' %}"></script>
 </body>
 </html>
