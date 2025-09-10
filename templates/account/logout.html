@@ -15,7 +15,9 @@
                 <form method="POST" action="{% url 'account_logout' %}">
                     {% csrf_token %}
                     <button class="btn btn-danger btn-lg" type="submit">Log out</button>
+                    <a href="{% url 'guild_list' %}" class="btn btn-warning btn-lg">Cancel</a>
                 </form>
+                
             </div>
             </div>
         </div>
