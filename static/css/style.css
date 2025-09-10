@@ -4,7 +4,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-
+    padding-top: 70px; /* fix so you can see the other stuff under the navbar when it is sticky */
     color: #f2f2f2; /* light grey color for all body texts */
     font-family: "Cinzel", serif; /* use google font in styling  */
 }
@@ -30,6 +30,11 @@ a {
 
  .navbar.bg-dark {
     background-color: #000000 !important;
+ }
+ /* navbar svg image fix so its center with navbar text */
+ .navbar-brand {
+    display: flex;
+    align-items: center;
  }
 /* FACTION change color theme */
 .guild-card.faction-alliance {
