@@ -21,9 +21,9 @@
                 <h6 class="card-subtitle mb-2 text-muted">{{ guild.realm }}</h6>
                 <p class="card-text">
                     <span class="badge {% if guild.faction == 'ALLIANCE' %}bg-primary{% else %}bg-danger{% endif %} d-inline-flex align-items-center">{% if guild.faction == 'ALLIANCE' %}
-                        <img src="{% static 'images/alliancelogo.svg' %}" alt="Alliance Logo" width="15" height="15" class="me-1">
+                        <img src="{% static 'images/allianceblack1.png' %}" alt="Alliance Logo" width="15" height="15" class="me-1">
                         {% else %}
-                        <img src="{% static 'images/hordelogo.svg' %}" alt="Horde Logo" width="15" height="15" class="me-1">
+                        <img src="{% static 'images/hordeblack1.png' %}" alt="Horde Logo" width="15" height="15" class="me-1">
                         {% endif %}
                         {{ guild.get_faction_display }}
                     </span>
