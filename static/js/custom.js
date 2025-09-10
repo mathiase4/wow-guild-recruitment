@@ -4,7 +4,7 @@ let mybutton = document.getElementById("back-to-top-btn");
 
 // run the ScrollFunction //
 window.onscroll = function() {
-    scrollFunction()
+    scrollFunction();
 };
 
 function scrollFunction() {
