@@ -1,0 +1,104 @@
+[
+{
+  "model": "guilds.guild",
+  "pk": 1,
+  "fields": {
+    "name": "Casual Horde Guild",
+    "slug": "casual-horde-guild",
+    "faction": "HORDE",
+    "region": "EU",
+    "realm": "Twisting Nether",
+    "description": "We are a casual Horde guild. We play for fun, do some normal raids and mythic+ dungeons. No pressure, just good times. Everyone is welcome!",
+    "image": "guild_images/casualhordeguild.webp",
+    "published": true,
+    "owner": 1,
+    "created_on": "2025-09-08T13:37:56.543Z",
+    "updated_on": "2025-09-08T18:18:28.717Z"
+  }
+},
+{
+  "model": "guilds.guild",
+  "pk": 3,
+  "fields": {
+    "name": "Fellowship of Stormwind",
+    "slug": "fellowship-of-stormwind",
+    "faction": "ALLIANCE",
+    "region": "EU",
+    "realm": "Ravencrest",
+    "description": "We are a social guild. We chat, quest, level, and sometimes raid. Perfect for players who want friends and no stress.",
+    "image": "guild_images/fellowshipofstormwind.webp",
+    "published": true,
+    "owner": 1,
+    "created_on": "2025-09-08T15:51:25.468Z",
+    "updated_on": "2025-09-08T18:18:15.750Z"
+  }
+},
+{
+  "model": "guilds.guild",
+  "pk": 4,
+  "fields": {
+    "name": "Dragons of Azeroth",
+    "slug": "dragons-of-azeroth",
+    "faction": "HORDE",
+    "region": "EU",
+    "realm": "Illidan",
+    "description": "We raid twice a week and do Mythic+ keys daily. We also like fun runs and old raid farming. Good for players who want both progress and chill.",
+    "image": "guild_images/dragonsofazeroth.webp",
+    "published": true,
+    "owner": 1,
+    "created_on": "2025-09-08T15:53:47.766Z",
+    "updated_on": "2025-09-08T18:18:04.528Z"
+  }
+},
+{
+  "model": "guilds.guild",
+  "pk": 5,
+  "fields": {
+    "name": "Moonlight Clan",
+    "slug": "moonlight-clan",
+    "faction": "ALLIANCE",
+    "region": "EU",
+    "realm": "Draenor",
+    "description": "We are a small friendly guild. We like questing, dungeons, and chatting. We don't rush, just enjoy the game together.",
+    "image": "guild_images/moonlight_clan.webp",
+    "published": true,
+    "owner": 1,
+    "created_on": "2025-09-08T15:54:42.383Z",
+    "updated_on": "2025-09-08T18:17:52.200Z"
+  }
+},
+{
+  "model": "guilds.guild",
+  "pk": 6,
+  "fields": {
+    "name": "Key Runners",
+    "slug": "key-runners",
+    "faction": "HORDE",
+    "region": "EU",
+    "realm": "Tarren Mill",
+    "description": "We are all about Mythic+ keys. We push high keys daily and help each other gear up. If you love dungeons more than raids, this is your home.",
+    "image": "guild_images/keyrunners.webp",
+    "published": true,
+    "owner": 1,
+    "created_on": "2025-09-08T15:56:04.159Z",
+    "updated_on": "2025-09-08T18:17:37.266Z"
+  }
+},
+{
+  "model": "guilds.guild",
+  "pk": 7,
+  "fields": {
+    "name": "Knights of Elwynn",
+    "slug": "knights-of-elwynn",
+    "faction": "ALLIANCE",
+    "region": "EU",
+    "realm": "Argent Dawn",
+    "description": "We are a roleplay guild. We create stories, events, and adventures together in the Alliance lands. Perfect for players who love RP and immersion.",
+    "image": "guild_images/knightsofelwynn.webp",
+    "published": true,
+    "owner": 1,
+    "created_on": "2025-09-08T15:57:27.192Z",
+    "updated_on": "2025-09-08T18:04:37.107Z"
+  }
+}
+]

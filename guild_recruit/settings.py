@@ -103,7 +103,7 @@ if os.environ.get("DEVELOPMENT"):  # Lokalt
             "NAME": BASE_DIR / "db.sqlite3",
         }
     }
-else:  # På Heroku
+else:  # on Heroku
     DATABASES = {
         "default": dj_database_url.config(conn_max_age=600, ssl_require=True)
     }
@@ -170,5 +170,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
-"""I took help from dennis Ivy's youtube video for this to understand, the password reset email video. He uses the console email backend in development so i copied that setup. """
+"""I took help from dennis Ivy's youtube video for this to understand,
+the password reset email video. He uses the console email backend
+in development so i copied that setup. """
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
