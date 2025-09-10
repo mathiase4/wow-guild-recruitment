@@ -22,13 +22,14 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="{% url 'guild_list' %}">
+  <div class="container position-relative">
+    
+    <a class="navbar-brand me-auto" href="{% url 'guild_list' %}">
       <img src="{% static 'images/therealnavbarphoto.svg' %}" alt="Wow Logo" width="30" height="30" class="d-inline-block align-text-top me-2">WoW Guild Recruitment</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+    
   <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav ms-auto">
       {% if user.is_authenticated %}

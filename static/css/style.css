@@ -21,7 +21,7 @@ a {
     background-color: rgba(0, 0, 0, 0.4);
     padding: 1rem;
     color: #ffffff;
-    
+    height: 100%;
     
 
 }
@@ -46,7 +46,14 @@ a {
 .navbar-toggler:focus {
     box-shadow: none;
 }
-
+/* dropdown menu hamburger menu */
+.navbar-collapse .navbar-nav {
+    align-items: center;
+}
+.navbar-collapse .nav-item {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
 
 .navbar-toggler-icon {
     /* svg icon data-form that is golden yellow (#ffb700) */
@@ -180,11 +187,60 @@ a {
 /* Responsive @media queries for different screen types, like computer, mobile and tablet devices */
 /* ===============================================================================================*/
 
-/* give space between the buttons when the meny is popped out on the mobile screen. */
 
+/* For tablets and smaller devices (up to 991px wide) */
 @media (max-width: 991px) {
+
+    /* This turns the collapsed menu into a dropdown */
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 1000;
+
+        width: 250px;
+        background-color: rgba(10, 10, 10, 0.95);
+        border: 1px solid #444;
+        border-radius: 4px;
+        padding: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    /* Adds space between the stacked buttons inside the dropdown */
     .navbar-collapse .nav-item {
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
+    }
+
+    /* Make headings smaller on tablets and phones */
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    /* Adjust the back-to-top button for tablets and phones */
+    #back-to-top-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+}
+
+
+/* For mobile phones ONLY (up to 576px wide) */
+@media (max-width: 576px) {
+
+    /* Make the guild card images a bit shorter on small screens */
+    .guild-card-img {
+        aspect-ratio: 4 / 3;
+    }
+
+    /* Make the form container take up more of the screen width */
+    .form-container {
+        max-width: 95%;
     }
 }
