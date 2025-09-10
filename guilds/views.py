@@ -2,12 +2,14 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from .models import Guild
 from .forms import ApplicationForm, GuildForm
-from django.contrib.auth.decorators import login_required # what user is logged in
-#create your views here
+# what user is logged in
+from django.contrib.auth.decorators import login_required
+# create your views here
+
 
 def guild_list(request):
     """Public list of published guilds, wth a simple text search."""
-    q = request.GET.get("q","").strip()
+    q = request.GET.get("q", "").strip()
     guilds = Guild.objects.filter(published=True)
     if q:
         guilds = guilds.filter(name_icontains=q)
@@ -20,6 +22,7 @@ def guild_detail(request, slug):
     guild = get_object_or_404(Guild, slug=slug, published=True)
     return render(request, "guilds/guild_detail.html", {"guild": guild})
 
+
 def application_create(request, guild_id):
     """Handles the creation of a new application for a specific guild."""
     guild = get_object_or_404(Guild, id=guild_id, published=True)
@@ -27,7 +30,7 @@ def application_create(request, guild_id):
     if request.method == "POST":
         form = ApplicationForm(request.POST)
         if form.is_valid():
-            app = form.save(commit=False) 
+            app = form.save(commit=False)
             app.guild = guild
             app.save()
             messages.success(request, "Thanks! Your application was sent.")
@@ -37,8 +40,11 @@ def application_create(request, guild_id):
         form = ApplicationForm()
 
     # This part is now correctly unindented and will run for GET requests
-    return render(request, "guilds/application_form.html", {"form": form, "guild": guild})
-    
+    return render(request,
+                  "guilds/application_form.html",
+                  {"form": form, "guild": guild})
+
+
 @login_required
 def guild_create(request):
     """
@@ -53,27 +59,26 @@ def guild_create(request):
             guild.owner = request.user
             guild.save()
             guild.refresh_from_db()
-            
-            messages.success(request, "Your guild ad was created successfully!")
+
+            messages.success(
+                request, "Your guild ad was created successfully!")
             return redirect('guild_detail', slug=guild.slug)
     else:
-        # This block runs when user just visits the page 
+        # This block runs when user just visits the page
         form = GuildForm()
-        
-    
+
     # It run for GET requests, or if a POST form is invalid.
     context = {
         "form": form,
         "guild": None
     }
     return render(request, "guilds/guild_form.html", context)
-            
-            
+
 
 @login_required
 def guild_edit(request, slug):
     """Displays a form to edit an existing guild ad and handles submission."""
-    
+
     guild = get_object_or_404(Guild, slug=slug)
 
     # Is the logged-in user the owner of this guild???
@@ -86,7 +91,8 @@ def guild_edit(request, slug):
         form = GuildForm(request.POST, request.FILES, instance=guild)
         if form.is_valid():
             form.save()
-            messages.success(request, "Your guild ad has been updated successfully!")
+            messages.success(
+                request, "Your guild ad has been updated successfully!")
             return redirect('guild_detail', slug=guild.slug)
     else:
         # When just visiting the page, pre-fill the form with the guild's data
@@ -98,26 +104,27 @@ def guild_edit(request, slug):
     }
     return render(request, "guilds/guild_form.html", context)
 
+
 @login_required
 def guild_delete(request, slug):
     """ fetches a guild ad by slug for deletion,
     validates that the logged in user is the owner aswell,
     and handles the deletion confirmation."""
     guild = get_object_or_404(Guild, slug=slug)
-    
-    #only owner can see the delete confirmation 
+
+    # only owner can see the delete confirmation
     if guild.owner != request.user:
         messages.error(request, "You are not authorized to delete this ad.")
         return redirect('guild_list')
-    
+
     if request.method == "POST":
-        #user confirms by submitting the form, delete the object.
+        # user confirms by submitting the form, delete the object.
         guild.delete()
-        messages.success(request, f"The guild ad '{guild.name}' has been deleted.")
+        messages.success(
+            request, f"The guild ad '{guild.name}' has been deleted.")
         return redirect('guild_list')
-    
+
     context = {
         "guild": guild
     }
     return render(request, "guilds/guild_confirm_delete.html", context)
-    
