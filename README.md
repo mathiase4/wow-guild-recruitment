@@ -3,11 +3,137 @@
 A full-stack application for World Of Warcraft ("Video Game") players to find and recruit for guilds.
 **This is Portfolio Project 3**
 
-![Responsive Mockup of the WoW Guild Recruitment site](docs/screenshots/screenshots.mockup.png)
+![Responsive Mockup of the WoW Guild Recruitment site](docs/screenshots/screenshot.mockup.png)
+
+## Introduction
+
+World of Warcraft is a social game where players join guilds to play together.
+This project is a recruitment site where guild leaders can create ads and players can apply.
+The goal is to make it faster and easier to connect the right players with the right guilds.
+
+For many years, World of Warcraft players have said it is hard to find active people to play with.
+The game feels less social when guild recruitment is spread across forums, chats, and other websites.
+
+This project was built to fix that problem.
+With this site, players can quickly find a guild that fits them, and guild leaders can easily reach new members.
+In the future, more features will be added to make recruitment even better, solving many of the issues players 
+have talked about for years.
 
 
+## User Stories
 
+### As a Visitor (Not Logged In)
 
+**US1: View a list of guilds**
+> **User Story:** As a visitor, I want to see a list of guilds so I can find options.
+
+**Acceptance Criteria:**
+- I can see the guild name, faction, and realm on each card in the list.
+- I can click a "Details" button on a card to be taken to that specific guild's page.
+
+**US2: View a guild's detail page**
+> **User Story:** As a visitor, I want to open a guild page to read the full details.
+
+**Acceptance Criteria:**
+- I can see the guild's detailed description and other information.
+- I can see an "Apply" button to start an application.
+
+**US3: Apply to a guild**
+> **User Story:** As a visitor, I want to click “Apply” so I can contact the guild easily.
+
+**Acceptance Criteria:**
+- I am presented with a simple form to fill out (character name, class/spec, discord, message).
+- After submitting the form, I see a success message and am redirected back to the guild's detail page.
+
+**US4: Search for a guild** ( will add later -won't-have "right now")
+> **User Story:** As a visitor, I want to search for guilds by name.
+
+**Acceptance Criteria:**
+- I can see a search bar on the guild list page.
+- After entering a search term, the list is filtered to show only guilds with matching names.
+
+**US5: Create an Account or Log In**
+> **User Story:** As a visitor, I want to be able to register for an account to create my own ads, or log in if I already have one.
+
+**Acceptance Criteria:**
+- I can easily find "Sign Up" and "Log In" links in the navigation bar.
+- The registration form allows me to create a new account, which then logs me in.
+- The login form allows me to sign in with my existing credentials.
+
+---
+### As a Registered User (Logged In)
+
+**US6: Create a Guild Ad**
+> **User Story:** As a logged-in user, I want to be able to create a new guild ad.
+
+**Acceptance Criteria:**
+- I can find and access a "Create Guild" page.
+- After submitting the form, a new guild ad is created and I am listed as the owner.
+- I am redirected to the detail page for my new guild ad.
+
+**US7: Edit a Guild Ad**
+> **User Story:** As an ad owner, I want to be able to edit the ads that I own.
+
+**Acceptance Criteria:**
+- On the detail page of a guild I own, I can see an "Edit" button.
+- The edit page shows a form pre-filled with the current guild information.
+- When I save the form, the guild's details are updated.
+
+**US8: Delete a Guild Ad**
+> **User Story:** As an ad owner, I want to be able to delete the ads that I own.
+
+**Acceptance Criteria:**
+- On the detail page of a guild I own, I can see a "Delete" button.
+- I am asked to confirm before the ad is permanently deleted.
+- Once deleted, the ad no longer appears on the site.
+
+**US9: Upload an Image**
+> [cite_start]**User Story:** As an ad owner, I want to be able to upload an image for my guild ad. [cite: 1]
+
+**Acceptance Criteria:**
+- The create/edit form has a field for uploading an image file.
+- The uploaded image is shown on the guild's card and detail page.
+
+**US10: Log Out**
+> **User Story:** As a logged-in user, I want to be able to log out of my account.
+
+**Acceptance Criteria:**
+- I can see a "Log Out" link in the navigation bar.
+- Clicking the link ends my session and updates the navigation bar to show "Sign Up" and "Log In" again.
+
+---
+### As a Site Administrator
+
+**US11: Manage Content via Django Admin**
+> **User Story:** As an administrator, I want to manage all guilds and user content in the admin panel.
+
+**Acceptance Criteria:**
+- I can log in to the Django Admin area with superuser credentials.
+- I can create, view, update, and delete any guild or application from the admin panel.
+
+**US12: Publish/Unpublish a Guild**
+> **User Story:** As an administrator, I want to publish or unpublish a guild to control its visibility.
+
+**Acceptance Criteria:**
+- When a guild is marked as "published", it appears in the public list on the website.
+- When a guild is marked as "unpublished", it is hidden from the public list.
+
+---
+### Security & Deployment
+
+**US13: Secure Ad Management**
+> **User Story:** As a user, I want to be sure that I cannot edit or delete ads that I do not own.
+
+**Acceptance Criteria:**
+- The "Edit" and "Delete" buttons are not visible on ads owned by other users.
+- Attempting to go directly to the edit/delete URL for another user's ad results in an error.
+
+**US14: Site Deployment**
+> **User Story:** As the site owner, I want the application to be deployed and live on Heroku.
+
+**Acceptance Criteria:**
+- The site is live and accessible at its public Heroku URL.
+- The live site uses a PostgreSQL database and serves media/static files correctly.
 
 
 
