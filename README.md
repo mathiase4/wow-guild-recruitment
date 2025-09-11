@@ -390,6 +390,67 @@ This project was deployed to Heroku. I followed these steps to get the site live
     - `heroku run python manage.py migrate`
 7.  **Create a Superuser:** Finally, I created a superuser to be able to access the admin panel on the live site:
     - `heroku run python manage.py createsuperuser`
+  
+# Run Locally and (Installation)
+
+### Prerequisites
+- Python 3.12+
+- Git
+- (Optional) A Cloudinary Account if you want image uploads locally.
+
+### Clone and enter the project
+git clone https://github.com/mathiease4/wow-guild-recruitment.git
+cd wow-guild-recruitment
+
+### Create and activate a virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+### windows (PowerShell)
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+
+### Install dependencies
+Pip install -r requirements.txt
+
+### Create env.py
+import os
+
+os.environ.setdefault("SECRET_KEY", "replace-with-your-secret-key")
+**SQLite is used locally by default. If you want Postgres locally, add:**
+**os.environ.setdefault("DATABASE_URL", "postgres://<your-local-postgres-url>")**
+
+**Only needed if you want to test image uploads locally:**
+ **os.environ.setdefault("CLOUDINARY_URL", "cloudinary://<key>:<secret>@<cloud_name>")**
+
+**Mark local development**
+os.environ.setdefault("DEVELOPMENT", "True")
+
+**Note:** env.py is in .gitignore and should never be committed.
+
+### Link env.py in Settings.py
+import os
+if os.path.isfile('env.py'):
+    import env
+    
+### Run migrations & create a superuser
+python3 manage.py migrate
+python3 manage.py createsuperuser
+
+### (Optional) Dev email backend 
+**In settings.py you can set:**
+if os.environ.get("DEVELOPMENT") == "True":
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+### Start the server
+python3 manage.py runserver
+
+***admin Login**
+Go to http://127.0.0.1:8000/admin/
+ and log in with your superuser. 
+
+
+
 
 ## Wireframes
 
