@@ -205,7 +205,7 @@ This table holds all the information for a single guild advertisement.
 | `region`      | `CharField`       | The server region (e.g., EU, US).            |
 | `realm`       | `CharField`       | The name of the server.                      |
 | `description` | `TextField`       | A longer description of the guild.           |
-| `image`       | `ImageField`      | The image that the user uploads.             |
+| `image`       | `ImageField`      | The image that the user uploads(handled by Cloudinary.)|
 | `published`   | `BooleanField`    | Decides if the ad is visible or not.         |
 | `owner`       | `ForeignKey(User)`| Connects the ad to the user who created it.  |
 | `created_on`  | `DateTimeField`   | Automatically stores when the ad was made.   |
@@ -365,11 +365,18 @@ I also checked the site on these browsers and found no issues:
 - Safari 
 
 ### Bugs
-There are no known bugs that break the site.
 
-- I noticed that the card images can look a bit tall on the mobile view.
- I decided to leave this as is, because the site is still fully functional and responsive, which was the main goal for the project.
+I ran into a few issues during development. Here are the two main ones and how I solved them, showing both backend and frontend problem-solving.
 
+- **Fixed Bug: Site Crashing Locally (`ImproperlyConfigured` Error)**
+  - **Issue:** My site kept crashing on my local computer when I tried to run it. It gave an `ImproperlyConfigured` error that mentioned Cloudinary.
+  - **Cause:** The problem was that my local `env.py` file was missing the `CLOUDINARY_URL`. The site would load pages that didn't have images, but crashed as soon as a page *with* an image tried to load, because it couldn't connect to Cloudinary without the keys.
+  - **Fix:** I solved this by adding the correct `CLOUDINARY_URL` to my `env.py` file. This taught me that all environment variables must be set up correctly for all features to work.
+
+- **Investigated Issue: Card Images Look Stretched on Mobile**
+  - **Issue:** On mobile and tablet views, I noticed that the images in the guild cards looked very tall and stretched out compared to how they looked on the desktop view.
+  - **Cause:** After investigating with Chrome DevTools, I found this was because of how browsers handle images with `width: 100%`. To keep the image's proportions correct, the height would automatically grow a lot when the width of the card became smaller.
+  - **Decision:** I tested a fix using CSS `height` and `object-fit: cover` which solved the visual problem. However, I decided that since the site was still fully responsive and the images were clear and not distorted, this was a visual polish issue and not a critical bug. I decided to keep the original, simpler code as it fulfilled the main requirements of the project. This was a good lesson in prioritizing tasks.
 
 ## Deployment
 
