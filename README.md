@@ -45,12 +45,6 @@ have talked about for years.
 - I am presented with a simple form to fill out (character name, class/spec, discord, message).
 - After submitting the form, I see a success message and am redirected back to the guild's detail page.
 
-**US4: Search for a guild** ( will add later -won't-have "right now")
-> **User Story:** As a visitor, I want to search for guilds by name.
-
-**Acceptance Criteria:**
-- I can see a search bar on the guild list page.
-- After entering a search term, the list is filtered to show only guilds with matching names.
 
 **US5: Create an Account or Log In**
 > **User Story:** As a visitor, I want to be able to register for an account to create my own ads, or log in if I already have one.
@@ -136,7 +130,63 @@ have talked about for years.
 - The live site uses a PostgreSQL database and serves media/static files correctly.
 
 
+## Features
 
+### User Accounts (powered by django-allauth)
+- **Secure User Registration:** Users can create a personal account with a unique username, email, and password. This allows them to create and manage their own guild ads.
+- **User Login and Logout:** Registered users can log in to access member-only features and log out securely. The navigation bar updates to reflect the user's logged-in status.
+- **Password Reset:** Users who have forgotten their password can request a reset link via email, providing a secure way to regain access to their account.
+
+### Guild Management (CRUD)
+- **Create Guild Ad:** Logged-in users can create new guild advertisements through a simple and intuitive form.
+- **Read Guilds:** All visitors can browse a list of all published guilds on the homepage. They can click on any guild to view a detailed page with more information.
+- **Update Guild Ad:** Users can easily edit the information on the guild ads that they are the owner of.
+- **Delete Guild Ad:** Users can permanently delete their own guild ads after a confirmation prompt to prevent accidental deletions.
+
+### Interactivity & User Experience
+- **Image Uploads:** Users can upload a custom image for their guild ad, which is hosted externally on Cloudinary.
+- **Apply to Guild:** A simple application form allows players to easily send their information (character name, message, etc.) to a guild they are interested in.
+- **User Feedback:** Clear success messages are shown to the user after performing important actions, such as creating an ad or sending an application.
+- **Responsive Design:** The site is fully functional and visually appealing on all devices, from mobile phones to large desktops, ensuring a consistent user experience.
+
+### Site Administration
+- **Full Admin Control:** The site owner has full administrative control over all user-generated content (guilds, applications) via the built-in Django Admin panel.
+- **Publish / Unpublish Content:** The site admin can toggle the visibility of any guild ad, allowing for content moderation.
+
+
+
+## Data Schema
+
+For this project, I created a database with two main tables to store all the information: one for the guilds and one for the applications.
+
+### The Guild Model
+This table holds all the information for a single guild advertisement.
+
+| Field Name    | Field Type        | Description                                  |
+|---------------|-------------------|----------------------------------------------|
+| `name`        |  `CharField`       | The name of the guild.                       |
+| `slug`        | `SlugField`       | A URL-friendly version of the name.          |
+| `faction`     | `CharField`       | The guild's faction (Alliance or Horde).     |
+| `region`      | `CharField`       | The server region (e.g., EU, US).            |
+| `realm`       | `CharField`       | The name of the server.                      |
+| `description` | `TextField`       | A longer description of the guild.           |
+| `image`       | `ImageField`      | The image that the user uploads.             |
+| `published`   | `BooleanField`    | Decides if the ad is visible or not.         |
+| `owner`       | `ForeignKey(User)`| Connects the ad to the user who created it.  |
+| `created_on`  | `DateTimeField`   | Automatically stores when the ad was made.   |
+| `updated_on`  | `DateTimeField`   | Automatically stores when the ad was last edited. |
+
+### The Application Model
+This table holds the information for a player's application to a specific guild. It is connected to the Guild model, so each application knows which guild it belongs to.
+
+| Field Name       | Field Type         | Description                                     |
+|------------------|--------------------|-------------------------------------------------|
+| `guild`          | `ForeignKey(Guild)`| Connects the application to a specific guild.   |
+| `character_name` | `CharField`        | The applicant's character name.                 |
+| `class_spec`     | `CharField`        | The applicant's class and spec.                 |
+| `discord`        | `CharField`        | The applicant's Discord username.               |
+| `message`        | `TextField`        | The message the applicant wrote to the guild.   |
+| `created_on`     | `DateTimeField`    | Automatically stores when the application was sent. |
 
 
 
