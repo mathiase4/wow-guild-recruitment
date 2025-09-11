@@ -181,6 +181,13 @@ This section provides an overview of the main features of the website, with scre
 - **Full Admin Control:** The site owner has full administrative control over all user-generated content (guilds, applications) via the built-in Django Admin panel.
 - **Publish / Unpublish Content:** The site admin can toggle the visibility of any guild ad, allowing for content moderation.
 
+### Future Features
+- **Advanced Search and Filtering:** A more powerful search bar in the navigation that would allow users to filter guilds not just by name, but also by region, faction, and server/realm.
+- **User & Character Profiles:** A dedicated profile page where registered users can showcase their main character, including class, specialization, and other relevant details.
+- **Comments & Rating System:** A feature to allow players to leave comments or ratings on guild ad pages, providing community feedback.
+- **Community Forum:** A simple forum section could be added to allow for more general discussions about the game, finding groups, and other community activities.
+- **Connect With Bnet App:** Connect your wow account to your wow-guild-recruitment so you can connect with people directly from the game.
+
 
 
 ## Data Schema
