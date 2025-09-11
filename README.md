@@ -191,14 +191,143 @@ This table holds the information for a player's application to a specific guild.
 
 
 
+## Design Choices
+
+### Theme
+The website has a custom theme inspired by the game **World of Warcraft**. The goal was to create a dark, immersive atmosphere that would feel familiar and appealing to the target audience of WoW players. The design aims to be clean and modern, while still capturing the fantasy aesthetic of the game.
+
+### Colour Scheme
+- The primary background is a very dark grey to create a comfortable viewing experience in low-light environments, which is common for gaming.
+- A prominent accent colour is a vibrant green, reminiscent of the "fel magic" in the game. And Faction border Colours for the guild cards.
+- Action buttons and important links use a contrasting yellow/gold colour, which stands out against the dark/green background and mimics the colour of buttons and quests within the game itself.
+
+### Typography
+- The main font used for headings is **Cinzel**, sourced from Google Fonts. This serif font was chosen for its classic, epic fantasy feel, which aligns perfectly with the World of Warcraft theme.
+- For body text, a standard sans-serif font is used for maximum readability.
+
+### Layout
+- The project uses a **responsive, mobile-first** approach to ensure a good user experience on all screen sizes.
+- **Bootstrap 5** is used for its powerful grid system, which allows the guild ads to be displayed in a clean card-based layout. The number of columns adjusts automatically depending on the screen width.
 
 
 
+## Technologies Used
+
+### Main Technologies
+- **HTML5:** For the basic structure of the site.
+- **CSS3:** For all the custom styling.
+- **JavaScript:** For interactive elements.
+- **Python:** For all the backend logic.
+- **Django:** The main framework used to build the project.
+
+### Frameworks & Libraries
+- **Bootstrap 5:** For the responsive layout and styling of components like buttons and cards.
+- **Google Fonts:** To import the "Cinzel" font.
+- **django-allauth:** To handle user accounts (sign up, log in, log out).
+- **django-crispy-forms:** To style the Django forms.
+- **Pillow:** To handle image uploads in Python.
+- **Gunicorn:** The server used to run the app on Heroku.
+- **Whitenoise:** To serve static files like CSS and JS on Heroku.
+
+### Database & Hosting
+- **Heroku:** The platform used to host the live site.
+- **PostgreSQL:** The database used on the live site.
+- **Cloudinary:** The service used to store user-uploaded images.
+- **SQLite3:** The database used for local development.
+
+### Tools
+- **Git & GitHub:** For version control.
+- **VS Code:** My code editor.
+- **Chrome DevTools:** For debugging and testing.
+
+## Credits
+
+### Code & Tutorials
+- **Code Institute:** The "I Think Therefore I Blog" walkthrough project was a key reference for the initial Django setup and structure.
+- And [https://codeinstitute.s3.eu-west-1.amazonaws.com/PDF/Django%2BCheat%2BSheet.pdf]
+- **YouTube Tutorials:** Various tutorials were used to understand specific Django concepts and solve problems.
+- **Cheatsheets:** I used cheatsheets for Django, JavaScript, and CSS as quick references.
+- **Stack Overflow:** For solutions to specific coding errors and questions.
+
+### Media
+- **Sora AI:** The background images and some placeholder photos were generated using Sora AI.
+- **WoW Fandom Wiki:** Horde and Alliance logos were sourced from here.
+
+### Acknowledgements
+- **AI Assistance:** I used AI assistants like ChatGPT and Grok to help explain concepts more clearly, and improve my knowledge on what i was doing.
 
 
 
+## Testing
 
+I tested my project in different ways during development. I did manual testing to make sure all features work as expected, and used online tools to check my code for errors and to test performance.
 
+### Manual Feature Testing
+
+I went through all the user stories to test each feature of the website.
+
+**User Accounts**
+- **Feature:** User Registration
+- **To Test:** I went to the "Sign Up" page, filled in the form with a new username, email, and password, and clicked the submit button.
+- **Expected:** A new user should be created and I should be logged in automatically and sent to the homepage.
+- **Result:** This worked as expected.
+
+- **Feature:** User Login & Logout
+- **To Test:** I logged out, then went to the "Log In" page and signed in with the user I just created. Then I clicked "Log Out".
+- **Expected:** I should be able to log in. The navigation bar should change to show I'm logged in. When I log out, the navigation bar should change back.
+- **Result:** This worked as expected.
+
+**Guild Ad Features (CRUD)**
+- **Feature:** Create a Guild Ad
+- **To Test:** While logged in, I clicked "Create Guild", filled out the form, uploaded an image, and submitted.
+- **Expected:** A new ad should be created and show up on the homepage. I should be sent to the detail page for the new ad.
+- **Result:** This worked as expected.
+
+- **Feature:** Edit & Delete a Guild Ad
+- **To Test:** As the owner of an ad, I went to its detail page. I clicked "Edit", changed some text, and saved. Then I clicked "Delete" and confirmed.
+- **Expected:** I should be able to save my changes. When I delete the ad, it should disappear from the site.
+- **Result:** This worked as expected.
+
+- **Feature:** Security
+- **To Test:** I logged in as one user, and tried to go to the edit URL for an ad created by a different user.
+- **Expected:** I should not be able to see the edit page. The site should give me a "Not Found" error.
+- **Result:** This worked as expected. The "Edit" and "Delete" buttons were also correctly hidden.
+
+### Validator Testing
+- **HTML:** I tested all HTML files with the official W3C Validator. All pages passed without any errors.
+    - [docs/testingphotos/test.htmlstartsite.png]
+    - [docs/testingphotos/test.html.login.png]
+    - [docs/testingphotos/test.html.details.png]
+    - [docs/testingphotos/test.html.createguildad.png]
+    - [docs/testingphotos/test.html.applytoguild.png]
+
+- **CSS:** I tested my `style.css` file with the official W3C Jigsaw Validator. It passed without any errors.
+    - [INSERT CSS VALIDATOR SCREENSHOT HERE]
+
+- **Python:** I used a linter in VS Code to make sure my Python code follows the PEP8 style guide.
+    - [INSERT LINTER SCREENSHOT (e.g., "0 problems") HERE]
+
+### Performance and Accessibility
+I used Lighthouse in Chrome DevTools to test the performance and accessibility of my live site.
+
+**Desktop Lighthouse Report**
+- [INSERT DESKTOP LIGHTHOUSE SCREENSHOT HERE]
+
+**Mobile Lighthouse Report**
+- [INSERT MOBILE LIGHTHOUSE SCREENSHOT HERE]
+
+### Responsiveness and Browser Testing
+I used Chrome DevTools to check that the site looks good on different devices like mobile phones (iPhone 12 view) and tablets (iPad Air view). All content was readable and easy to use.
+
+I also checked the site on these browsers and found no issues:
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Edge
+
+### Bugs
+There are no known bugs that break the site.
+
+I noticed that the card images can look a bit tall on the mobile view. I decided to leave this as is, because the site is still fully functional and responsive, which was the main goal for the project.
 
 
 
