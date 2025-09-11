@@ -391,6 +391,20 @@ This project was deployed to Heroku. I followed these steps to get the site live
 7.  **Create a Superuser:** Finally, I created a superuser to be able to access the admin panel on the live site:
     - `heroku run python manage.py createsuperuser`
   
+
+## Environment Variables
+
+To keep my secret keys and other private information safe, I used environment variables. This means the secret keys are not saved in my public GitHub repository.
+
+For my local computer, I created a file called `env.py` to hold these keys. This file is included in the `.gitignore` file so it is never uploaded to GitHub. On the live Heroku site, I used "Config Vars" for the same purpose.
+
+The project needs these variables to work:
+
+**SECRET_KEY - This is Django's secret key for security features.**
+**CLOUDINARY_URL - This holds my API keys for the Cloudinary service, so the site knows how to connect to it.**
+**DEVELOPMENT - I set this to "True" on my local machine to make the site use the local SQLite database for testing.**
+   
+  
 # Run Locally and (Installation)
 
 ### Prerequisites
