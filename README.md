@@ -314,10 +314,10 @@ I went through all the user stories to test each feature of the website.
 I used Lighthouse in Chrome DevTools to test the performance and accessibility of my live site.
 
 **Desktop Lighthouse Report**
-- ![DEVTOOLS LIGHTHOUSE TEST DESKTOP](docs/testingphotos.desktop.lighthouse.png)
+- ![DEVTOOLS LIGHTHOUSE TEST DESKTOP](docs/testingphotos/screenshot.desktop.lighthouse.png)
 
 **Mobile Lighthouse Report**
-- ![DEVTOOLS LIGHTHOUSE TEST MOBILE](docs/testingphotos.mobile.lighthouse.png)
+- ![DEVTOOLS LIGHTHOUSE TEST MOBILE](docs/testingphotos/screenshot.mobile.lighthouse.png)
 
 ### Responsiveness and Browser Testing
 I used Chrome DevTools to check that the site looks good on different devices like mobile phones (iPhone 12 view) and tablets (iPad Air view). All content was readable and easy to use.
