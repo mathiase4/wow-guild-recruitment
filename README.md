@@ -162,7 +162,7 @@ This section provides an overview of the main features of the website, with scre
 ![Screenshot of a guild detail page](docs/screenshots/screenshot.guilddetail.png)
 
 **Create/Edit Form:**
-![Screenshot of the create/edit form](docs/screenshot/screenshot.createaguild.png)
+![Screenshot of the create/edit form](docs/screenshots/screenshot.createaguild.png)
 
 ### Interactivity & User Experience
 - **Image Uploads:** Users can upload a custom image for their guild ad, which is hosted externally on Cloudinary.
@@ -171,7 +171,7 @@ This section provides an overview of the main features of the website, with scre
 - **Responsive Design:** The site is fully functional and visually appealing on all devices, from mobile phones to large desktops, ensuring a consistent user experience.
 
 
-  ![Screenshot showing the site on mobile](docs/screenshot.phoneview.png)
+  ![Screenshot showing the site on mobile](docs/screenshots/screenshot.phoneview.png)
 
   **Phone View with the hamburger menu**
   ![the hamburger menu](docs/screenshots/screenshot.navbartogglemenu.png)
