@@ -3,6 +3,11 @@
 A full-stack application for World Of Warcraft ("Video Game") players to find and recruit for guilds.
 **This is Portfolio Project 3**
 
+## Live Project Links
+- **Live Site:** https://wow-guild-recruitment.herokuapp.com/
+- **Repository:** https://github.com/mathiase4/wow-guild-recruitment
+
+
 ![Responsive Mockup of the WoW Guild Recruitment site](docs/screenshots/screenshot.mockup.png)
 
 ## Introduction
