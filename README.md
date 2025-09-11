@@ -1,5 +1,40 @@
-# wow-guild-recruitment
+# WoW Guild Recruitment
 
+A full-stack application for World Of Warcraft ("Video Game") players to find and recruit for guilds.
+**This is Portfolio Project 3**
+
+![Responsive Mockup of the WoW Guild Recruitment site](screenshots.mockup.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+============================================================
 ## Purpose and Value
 Simple guild recruitment board for World of Warcraft. Users can post guild ads with guild name, role and realm.
 
