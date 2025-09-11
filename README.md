@@ -50,6 +50,15 @@ have talked about for years.
 - I am presented with a simple form to fill out (character name, class/spec, discord, message).
 - After submitting the form, I see a success message and am redirected back to the guild's detail page.
 
+  **US4: Back to Top Button**
+> **User Story:** As a visitor, I want a "Back to Top" button so I can easily return to the top of the page without scrolling.
+
+**Acceptance Criteria:**
+- I can see a small button on the bottom corner of the page when I scroll down.
+- When I click the button, the page smoothly scrolls back to the top.
+- The button is powered by a simple JavaScript function.
+
+
 
 **US5: Create an Account or Log In**
 > **User Story:** As a visitor, I want to be able to register for an account to create my own ads, or log in if I already have one.
