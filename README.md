@@ -82,7 +82,7 @@ have talked about for years.
 - Once deleted, the ad no longer appears on the site.
 
 **US9: Upload an Image**
-> [cite_start]**User Story:** As an ad owner, I want to be able to upload an image for my guild ad. [cite: 1]
+> **User Story:** As an ad owner, I want to be able to upload an image for my guild ad. 
 
 **Acceptance Criteria:**
 - The create/edit form has a field for uploading an image file.
