@@ -4,7 +4,7 @@ A full-stack application for World Of Warcraft ("Video Game") players to find an
 **This is Portfolio Project 3**
 
 ## Live Project Links
-- **Live Site:** https://wow-guild-recruitment.herokuapp.com/
+- **Live Site:** https://wow-guild-recruitment-7eefeb53aa7b.herokuapp.com/
 - **Repository:** https://github.com/mathiase4/wow-guild-recruitment
 
 
