@@ -483,7 +483,7 @@ The project needs these variables to work:
 # Run Locally and (Installation)
 
 ### Prerequisites
-- Python 3.12+
+- Python 3.9+
 - Git
 - (Optional) A Cloudinary Account if you want image uploads locally.
 
