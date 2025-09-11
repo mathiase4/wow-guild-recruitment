@@ -3,7 +3,7 @@
 A full-stack application for World Of Warcraft ("Video Game") players to find and recruit for guilds.
 **This is Portfolio Project 3**
 
-![Responsive Mockup of the WoW Guild Recruitment site](screenshots.mockup.png)
+![Responsive Mockup of the WoW Guild Recruitment site](docs/screenshots/screenshots.mockup.png)
 
 
 
