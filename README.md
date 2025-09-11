@@ -295,17 +295,20 @@ I went through all the user stories to test each feature of the website.
 
 ### Validator Testing
 - **HTML:** I tested all HTML files with the official W3C Validator. All pages passed without any errors.
+
     - ![HTML GUILD LIST/ STARTSITE CODE TEST](docs/testingphotos/test.htmlstartsite.png)
     - ![HTML LOGIN SITE CODE TEST](docs/testingphotos/test.html.login.png)
     - ![HTML GUILD DETAILS CODE TEST](docs/testingphotos/test.html.details.png)
     - ![HTML CREATE A GUILD CODE TEST](docs/testingphotos/test.html.createguildad.png)
     - ![HTML APPLY TO A GUILD CODE TEST](docs/testingphotos/test.html.applytoguild.png)
 
-- **CSS:** I tested my `style.css` file with the official W3C Jigsaw Validator. It passed without any errors.
-    - [INSERT CSS VALIDATOR SCREENSHOT HERE]
+- **CSS:** I tested my style.css file with the official W3C Jigsaw Validator. It passed without any errors.
+    - ![CSS CODE TEST](docs/testingphotos/test.css.code.png)
 
 - **Python:** I used a linter in VS Code to make sure my Python code follows the PEP8 style guide.
-    - [INSERT LINTER SCREENSHOT (e.g., "0 problems") HERE]
+    - ![PYTHON PEP8 LINTER GUILDS/FORMS.PY](docs/testingphotos/test.guilds.forms.png)
+    - ![PYTHON PEP8 LINTER GUILDS/MODELS.PY](docs/testingphotos/test.guilds.models.png)
+    - ![PYTHON PEP8 LINTER GUILDS/VIEWS.PY](docs/testingphotos/test.guilds.views.png)
 
 ### Performance and Accessibility
 I used Lighthouse in Chrome DevTools to test the performance and accessibility of my live site.
