@@ -13,6 +13,9 @@
             {% if guild.image %}
             
 <img src="{{ guild.image.url }}" class="card-img-top guild-card-img"  alt="{{ guild.name }}">
+{% else %}
+<img src="{% static 'images/placeholder.jpg' %}" class="card-img-top guild-card-img" alt="No image available">
+            
             
 {% endif %}
 
