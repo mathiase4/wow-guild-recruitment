@@ -139,7 +139,15 @@ This section provides an overview of the main features of the website, with scre
 - **User Login and Logout:** Registered users can log in to access member-only features and log out securely. The navigation bar updates to reflect the user's logged-in status.
 - **Password Reset:** Users who have forgotten their password can request a reset link via email, providing a secure way to regain access to their account.
 
+  **Log in Page:**
   ![Screenshot of the Login Page](docs/screenshots/screenshot.login.png)
+
+  **Sign Up Page:**
+![Screenshot of the Sign Up page](docs/screenshots/screenshot.signup.png)
+
+
+**Password Reset Page:**
+![Screenshot of the Password Reset page](docs/screenshots/screenshot.passwordreset.png)
 
 ### Guild Management (CRUD)
 - **Create Guild Ad:** Logged-in users can create new guild advertisements through a simple and intuitive form.
@@ -151,10 +159,10 @@ This section provides an overview of the main features of the website, with scre
 ![Screenshot of the main guild list page](docs/screenshots/screenshot.start.png)
 
 **Guild Detail Page:**
-![Screenshot of a guild detail page](docs/screenshots/screenshot.)
+![Screenshot of a guild detail page](docs/screenshots/screenshot.guilddetail.png)
 
 **Create/Edit Form:**
-![Screenshot of the create/edit form](LÄNK-TILL-DIN-BILD-PÅ-FORMULÄRET-HÄR)
+![Screenshot of the create/edit form](docs/screenshot/screenshot.createaguild.png)
 
 ### Interactivity & User Experience
 - **Image Uploads:** Users can upload a custom image for their guild ad, which is hosted externally on Cloudinary.
@@ -163,7 +171,10 @@ This section provides an overview of the main features of the website, with scre
 - **Responsive Design:** The site is fully functional and visually appealing on all devices, from mobile phones to large desktops, ensuring a consistent user experience.
 
 
-  ![Screenshot showing the site on mobile](LÄNK-TILL-DIN-BILD-PÅ-MOBILVY-HÄR)
+  ![Screenshot showing the site on mobile](docs/screenshot.phoneview.png)
+
+  **Phone View with the hamburger menu**
+  ![the hamburger menu](docs/screenshots/screenshot.navbartogglemenu.png)
 
 
 ### Site Administration
