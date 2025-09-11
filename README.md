@@ -132,10 +132,14 @@ have talked about for years.
 
 ## Features
 
+This section provides an overview of the main features of the website, with screenshots to demonstrate the final product.
+
 ### User Accounts (powered by django-allauth)
 - **Secure User Registration:** Users can create a personal account with a unique username, email, and password. This allows them to create and manage their own guild ads.
 - **User Login and Logout:** Registered users can log in to access member-only features and log out securely. The navigation bar updates to reflect the user's logged-in status.
 - **Password Reset:** Users who have forgotten their password can request a reset link via email, providing a secure way to regain access to their account.
+
+  ![Screenshot of the Login Page](docs/screenshots/screenshot.login.png)
 
 ### Guild Management (CRUD)
 - **Create Guild Ad:** Logged-in users can create new guild advertisements through a simple and intuitive form.
@@ -143,11 +147,24 @@ have talked about for years.
 - **Update Guild Ad:** Users can easily edit the information on the guild ads that they are the owner of.
 - **Delete Guild Ad:** Users can permanently delete their own guild ads after a confirmation prompt to prevent accidental deletions.
 
+  **Main Guild List Page:**
+![Screenshot of the main guild list page](docs/screenshots/screenshot.start.png)
+
+**Guild Detail Page:**
+![Screenshot of a guild detail page](docs/screenshots/screenshot.)
+
+**Create/Edit Form:**
+![Screenshot of the create/edit form](LÄNK-TILL-DIN-BILD-PÅ-FORMULÄRET-HÄR)
+
 ### Interactivity & User Experience
 - **Image Uploads:** Users can upload a custom image for their guild ad, which is hosted externally on Cloudinary.
 - **Apply to Guild:** A simple application form allows players to easily send their information (character name, message, etc.) to a guild they are interested in.
 - **User Feedback:** Clear success messages are shown to the user after performing important actions, such as creating an ad or sending an application.
 - **Responsive Design:** The site is fully functional and visually appealing on all devices, from mobile phones to large desktops, ensuring a consistent user experience.
+
+
+  ![Screenshot showing the site on mobile](LÄNK-TILL-DIN-BILD-PÅ-MOBILVY-HÄR)
+
 
 ### Site Administration
 - **Full Admin Control:** The site owner has full administrative control over all user-generated content (guilds, applications) via the built-in Django Admin panel.
