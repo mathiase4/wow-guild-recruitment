@@ -214,6 +214,32 @@ This section provides an overview of the main features of the website, with scre
 - **Full Admin Control:** The site owner has full administrative control over all user-generated content (guilds, applications) via the built-in Django Admin panel.
 - **Publish / Unpublish Content:** The site admin can toggle the visibility of any guild ad, allowing for content moderation.
 
+
+## Security
+
+- **Authentication:** Managed by django-allauth (login, signup, logout).
+- **Authorization:** Only the owner can edit or delete their own guild ads.
+  - Buttons are hidden in templates for other users.
+  - Server-side checks in views block direct access (edit/delete URLs).
+- **CSRF:** All forms use `{% csrf_token %}`.
+- **Secret keys:** Kept in environment variables (never committed to Git).
+- **Production settings:** `DEBUG=False` on Heroku, correct ALLOWED_HOSTS and CSRF_TRUSTED_ORIGINS.
+- **Static & media:** whitenoise for static; Cloudinary for user-uploaded images.
+- **Validation:** Forms validate input before saving; friendly error messages shown to users.
+
+
+## Accessibility
+
+- **Semantic HTML:** Proper use of `header`, `nav`, `main`, `footer`, and headings order.
+- **Alt text:** Meaningful images include `alt` text.
+- **Forms:** Labels and clear error/success messages.
+- **Keyboard:** All interactive elements are reachable with keyboard (tab order is logical).
+- **Contrast & readability:** Colors checked with Lighthouse; fonts are readable on mobile and desktop.
+- **Responsive:** Mobile-first layout with Bootstrap 5 grid.
+
+
+
+
 ### Future Features
 - **Advanced Search and Filtering:** A more powerful search bar in the navigation that would allow users to filter guilds not just by name, but also by region, faction, and server/realm.
 - **User & Character Profiles:** A dedicated profile page where registered users can showcase their main character, including class, specialization, and other relevant details.
