@@ -330,13 +330,39 @@ I also checked the site on these browsers and found no issues:
 ### Bugs
 There are no known bugs that break the site.
 
-I noticed that the card images can look a bit tall on the mobile view. I decided to leave this as is, because the site is still fully functional and responsive, which was the main goal for the project.
+- I noticed that the card images can look a bit tall on the mobile view.
+ I decided to leave this as is, because the site is still fully functional and responsive, which was the main goal for the project.
 
 
+## Deployment
 
+This project was deployed to Heroku. I followed these steps to get the site live:
 
+1.  **Create the Heroku App:** I started by creating a new app on the Heroku dashboard.
+2.  **Add the Database:** From the "Resources" tab in Heroku, I added the "Heroku Postgres" add-on to create the production database.
+3.  **Set Config Vars:** In the app's "Settings" tab, I set the required environment variables (Config Vars):
+    - SECRET_KEY: My project's secret key.
+    - DATABASE_URL: The URL for the PostgreSQL database (this was added automatically by Heroku).
+    - CLOUDINARY_URL: The URL with my API keys for the Cloudinary service.
+4.  **Prepare for Deployment:** In my project, I created the necessary files for Heroku:
+    - requirements.txt was created using the command pip freeze > requirements.txt.
+    - A Procfile was created with the text `web: gunicorn guild_recruit.wsgi`.
+5.  **Push to Heroku:** I used Git to push my project code to Heroku. The command used was:
+    - `git push heroku main`
+6.  **Run Migrations:** After the code was pushed, I ran the database migrations on the Heroku server to set up the tables:
+    - `heroku run python manage.py migrate`
+7.  **Create a Superuser:** Finally, I created a superuser to be able to access the admin panel on the live site:
+    - `heroku run python manage.py createsuperuser`
 
+## Wireframes
 
+Before I started coding, I created some simple wireframes to plan the basic layout of the site. This helped me think about the structure for both desktop and mobile views.
+
+![My Wireframes GUILD LIST](docs/wireframes/wireframeguildlist.png)
+![My Wireframes GUILD DETAILS](docs/wireframes/wireframeguilddetail.png)
+![My Wireframes CREATE AND EDIT GUILD](docs/wireframes/wireframecreateedit.png)
+![My Wireframes APPLY TO A GUILD](docs/wireframes/wireframeapplyform.png)
+![My Wireframes LOGOUT FROM SITE](docs/wireframes/wireframelogout.png)
 
 
 
