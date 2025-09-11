@@ -425,7 +425,7 @@ The project needs these variables to work:
 - (Optional) A Cloudinary Account if you want image uploads locally.
 
 ### Clone and enter the project
-git clone https://github.com/mathiease4/wow-guild-recruitment.git
+git clone https://github.com/mathiase4/wow-guild-recruitment.git
 cd wow-guild-recruitment
 
 ### Create and activate a virtual environment
