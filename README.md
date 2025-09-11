@@ -135,6 +135,34 @@ have talked about for years.
 - The live site uses a PostgreSQL database and serves media/static files correctly.
 
 
+## Agile Planning 
+
+I worked with Agile methods in a very simple way.
+
+- **User Stories:**  
+  I created user stories with acceptance criteria.
+
+- **Project Board:**  
+  I used a GitHub Project Kanban board with columns (To Do → In Progress → Done).
+
+- **MoSCoW Priorities:**  
+  - **Must have:** CRUD for guilds, register/login/logout, deployment, security.  
+  - **Should have:** image upload, success messages.  
+  - **Could have:** search, comments, profiles, forum (future).  
+  - **Won’t have:** advanced features not needed for this project.
+
+- **Iterations (sprints):**  
+  1. Setup project and guild list/detail.  
+  2. Authentication and create guild.  
+  3. Edit/delete guilds + permissions.  
+  4. Image upload and admin publish/unpublish.  
+  5. Deployment, testing, documentation.
+
+- **Definition of Done:**  
+  A story is finished when the feature works, code is pushed to GitHub, tests pass, and the Issue is closed on the board.
+
+
+
 ## Features
 
 This section provides an overview of the main features of the website, with screenshots to demonstrate the final product.
