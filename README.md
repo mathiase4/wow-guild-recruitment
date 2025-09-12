@@ -257,7 +257,7 @@ This section provides an overview of the main features of the website, with scre
 
 
 
-## Data Schema
+## Data Schema (DataBase Model)
 
 For this project, I created a database with two main tables to store all the information: one for the guilds and one for the applications.
 
@@ -448,6 +448,7 @@ I ran into a few issues during development. Here are the two main ones and how I
 
 ## Deployment
 
+
 This project was deployed to Heroku. I followed these steps to get the site live:
 
 1.  **Create the Heroku App:** I started by creating a new app on the Heroku dashboard.
@@ -465,7 +466,8 @@ This project was deployed to Heroku. I followed these steps to get the site live
     - `heroku run python manage.py migrate`
 7.  **Create a Superuser:** Finally, I created a superuser to be able to access the admin panel on the live site:
     - `heroku run python manage.py createsuperuser`
-  
+      
+  - **I use environment variables in settings.py to handle the database setup. This makes it easy to switch between SQLite locally and PostgreSQL on Heroku.**
 
 ## Environment Variables
 
@@ -494,12 +496,12 @@ The project needs these variables to work:
     
     
 2.  **Navigate to the Directory:**
-    ```
+    ```Bash
     cd wow-guild-recruitment
     ```
     
 3.  **Create and Activate a Virtual Environment:**
-    ```
+    ```Bash
     # For Mac/Linux
     python3 -m venv .venv
     source .venv/bin/activate
@@ -510,7 +512,7 @@ The project needs these variables to work:
     ```
     
 4.  **Install Dependencies:**
-    ```
+    ```Bash
     pip install -r requirements.txt
     ```
     
@@ -527,18 +529,18 @@ The project needs these variables to work:
     
     *(Note: `env.py` is in `.gitignore` and should never be committed to GitHub).*
 6.  **Run Database Migrations:**
-    ```
+    ```Bash
     python3 manage.py migrate
     ```
     
 7.  **Create a Superuser (Optional but Recommended):**
     This is needed to access the Django Admin panel.
-    ```
+    ```Bash
     python3 manage.py createsuperuser
     ```
     
 8.  **Start the Server:**
-    ```
+    ```Bash
     python3 manage.py runserver
     ```
     
