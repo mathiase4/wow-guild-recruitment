@@ -480,63 +480,75 @@ The project needs these variables to work:
 **DEVELOPMENT - I set this to "True" on my local machine to make the site use the local SQLite database for testing.**
    
   
-# Run Locally and (Installation)
+## Running The Project Locally
 
 ### Prerequisites
 - Python 3.9+
-- Git
-- (Optional) A Cloudinary Account if you want image uploads locally.
+- Git Version Control
+- A code editor such as VS Code
 
-### Clone and enter the project
-git clone https://github.com/mathiase4/wow-guild-recruitment.git
-cd wow-guild-recruitment
-
-### Create and activate a virtual environment
-python3 -m venv .venv
-source .venv/bin/activate
-
-### windows (PowerShell)
-py -m venv .venv
-.\.venv\Scripts\Activate.ps1
-
-### Install dependencies
-Pip install -r requirements.txt
-
-### Create env.py
-import os
-
-os.environ.setdefault("SECRET_KEY", "replace-with-your-secret-key")
-**SQLite is used locally by default. If you want Postgres locally, add:**
-**os.environ.setdefault("DATABASE_URL", "postgres://<your-local-postgres-url>")**
-
-**Only needed if you want to test image uploads locally:**
- **os.environ.setdefault("CLOUDINARY_URL", "cloudinary://<key>:<secret>@<cloud_name>")**
-
-**Mark local development**
-os.environ.setdefault("DEVELOPMENT", "True")
-
-**Note:** env.py is in .gitignore and should never be committed.
-
-### Link env.py in Settings.py
-import os
-if os.path.isfile('env.py'):
-    import env
+### Installation
+1.  **Clone the Repository:**
+    ```bash
+    git clone [https://github.com/mathiase4/wow-guild-recruitment.git](https://github.com/mathiase4/wow-guild-recruitment.git)
+    ```
     
-### Run migrations & create a superuser
-python3 manage.py migrate
-python3 manage.py createsuperuser
+2.  **Navigate to the Directory:**
+    ```bash
+    cd wow-guild-recruitment
+    ```
+    
+3.  **Create and Activate a Virtual Environment:**
+    ```bash
+    # For Mac/Linux
+    python3 -m venv .venv
+    source .venv/bin/activate
 
-### (Optional) Dev email backend 
-**In settings.py you can set:**
-if os.environ.get("DEVELOPMENT") == "True":
-    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+    # For Windows (PowerShell)
+    py -m venv .venv
+    .\.venv\Scripts\Activate.ps1
+    ```
+    
+4.  **Install Dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+    
+5.  **Create the `env.py` file:**
+    - Create a new file in the main project folder named `env.py`.
+    - Add the following variables. You must provide your own `SECRET_KEY` and `CLOUDINARY_URL`.
+    ```python
+    import os
 
-### Start the server
-python3 manage.py runserver
+    os.environ["SECRET_KEY"] = "replace-with-your-own-secret-key"
+    os.environ["CLOUDINARY_URL"] = "replace-with-your-cloudinary-url"
+    os.environ["DEVELOPMENT"] = "True"
+    ```
+    
+    *(Note: `env.py` is in `.gitignore` and should never be committed to GitHub).*
+6.  **Run Database Migrations:**
+    ```bash
+    python3 manage.py migrate
+    ```
+    
+7.  **Create a Superuser (Optional but Recommended):**
+    This is needed to access the Django Admin panel.
+    ```bash
+    python3 manage.py createsuperuser
+    ```
+    
+8.  **Start the Server:**
+    ```bash
+    python3 manage.py runserver
+    ```
+    
+The site will be running at `http://127.0.0.1:8000/`.
 
-***admin Login**
-Go to http://127.0.0.1:8000/admin/
- and log in with your superuser. 
+
+
+
+
+
 
 
 
