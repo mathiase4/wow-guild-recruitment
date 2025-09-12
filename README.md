@@ -488,18 +488,18 @@ The project needs these variables to work:
 - A code editor such as VS Code
 
 ### Installation
+
 1.  **Clone the Repository:**
-    ```bash
-    git clone [https://github.com/mathiase4/wow-guild-recruitment.git](https://github.com/mathiase4/wow-guild-recruitment.git)
-    ```
+    git clone [https://github.com/mathiase4/wow-guild-recruitment.git](https://github.com/mathiase4/wow-guild-recruitment.git)
+    
     
 2.  **Navigate to the Directory:**
-    ```bash
+    ```
     cd wow-guild-recruitment
     ```
     
 3.  **Create and Activate a Virtual Environment:**
-    ```bash
+    ```
     # For Mac/Linux
     python3 -m venv .venv
     source .venv/bin/activate
@@ -510,7 +510,7 @@ The project needs these variables to work:
     ```
     
 4.  **Install Dependencies:**
-    ```bash
+    ```
     pip install -r requirements.txt
     ```
     
@@ -527,18 +527,18 @@ The project needs these variables to work:
     
     *(Note: `env.py` is in `.gitignore` and should never be committed to GitHub).*
 6.  **Run Database Migrations:**
-    ```bash
+    ```
     python3 manage.py migrate
     ```
     
 7.  **Create a Superuser (Optional but Recommended):**
     This is needed to access the Django Admin panel.
-    ```bash
+    ```
     python3 manage.py createsuperuser
     ```
     
 8.  **Start the Server:**
-    ```bash
+    ```
     python3 manage.py runserver
     ```
     
