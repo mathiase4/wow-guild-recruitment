@@ -24,7 +24,8 @@ A full-stack application for World Of Warcraft ("Video Game") players to find an
 - [Running The Project Locally](#running-the-project-locally)
 - [Wireframes](#wireframes)
 - [Known Issues](#Known-Issues)
-- - [Credits](#Credits)
+- [Credits](#Credits)
+- [License](#License)
 
 
 
