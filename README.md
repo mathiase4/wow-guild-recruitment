@@ -321,7 +321,7 @@ The website has a custom theme inspired by the game **World of Warcraft**. The g
 - **CSS3:** For all the custom styling.
 - **JavaScript:** Used for small interactive elements like the "Back to Top" button.
   **The Button**
-  ![The javascript Button](docs/screenshots.screenshot.backtotop.png)
+  ![The javascript Button](docs/screenshots/screenshot.backtotop.png)
 - **Python:** For all the backend logic.
 - **Django:** The main framework used to build the project.
 
