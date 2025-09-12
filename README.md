@@ -7,6 +7,25 @@ A full-stack application for World Of Warcraft ("Video Game") players to find an
 - **Live Site:** https://wow-guild-recruitment-7eefeb53aa7b.herokuapp.com/
 - **Repository:** https://github.com/mathiase4/wow-guild-recruitment
 
+## Table of Contents
+- [Introduction](#introduction)
+- [User Stories](#user-stories)
+- [Agile Planning](#agile-planning)
+- [Features](#features)
+- [Security](#security)
+- [Accessibility](#accessibility)
+- [Future Features](#future-features)
+- [Data Schema](#data-schema-database-model)
+- [Design Choices](#design-choices)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Environment Variables](#environment-variables)
+- [Running The Project Locally](#running-the-project-locally)
+- [Wireframes](#wireframes)
+
+
+
 
 ![Responsive Mockup of the WoW Guild Recruitment site](docs/screenshots/screenshot.mockup.png)
 
