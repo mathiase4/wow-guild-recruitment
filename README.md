@@ -59,7 +59,6 @@ have talked about for years.
 - The button is powered by a simple JavaScript function.
 
 
-
 **US5: Create an Account or Log In**
 > **User Story:** As a visitor, I want to be able to register for an account to create my own ads, or log in if I already have one.
 
@@ -429,8 +428,9 @@ I used Chrome DevTools to check that the site looks good on different devices li
 
 I also checked the site on these browsers and found no issues:
 - Google Chrome
-- Used inkognito mode
-- Safari 
+- Used incognito mode
+- Safari
+  
 
 ### Bugs
 
