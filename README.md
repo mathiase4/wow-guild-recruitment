@@ -23,7 +23,8 @@ A full-stack application for World Of Warcraft ("Video Game") players to find an
 - [Environment Variables](#environment-variables)
 - [Running The Project Locally](#running-the-project-locally)
 - [Wireframes](#wireframes)
-
+- [Known Issues](#Known-Issues)
+- - [Credits](#Credits)
 
 
 
@@ -445,6 +446,9 @@ I used Lighthouse in Chrome DevTools to test the performance and accessibility o
 ### Responsiveness and Browser Testing
 I used Chrome DevTools to check that the site looks good on different devices like mobile phones (iPhone 12 view) and tablets (iPad Air view). All content was readable and easy to use.
 
+See [Known Issues](#known-issues) for minor visual bugs identified during mobile testing.
+
+
 I also checked the site on these browsers and found no issues:
 - Google Chrome
 - Used incognito mode
@@ -569,11 +573,6 @@ The site will be running at `http://127.0.0.1:8000/`.
 
 
 
-
-
-
-
-
 ## Wireframes
 
 Before I started coding, I created some simple wireframes to plan the basic layout of the site. This helped me think about the structure for both desktop and mobile views.
@@ -585,13 +584,46 @@ Before I started coding, I created some simple wireframes to plan the basic layo
 ![My Wireframes LOGOUT FROM SITE](docs/wireframes/wireframelogout.png)
 
 
+## Known Issues
+
+- **Mobile Navbar Size**  
+  On very small devices (e.g. iPhone 8 viewport 375x667), the navbar appears slightly larger than intended.  
+  This can cause the first line of content to sit a bit lower than expected. However, all navigation items are visible and functional.
+
+- **Hamburger Menu Icon**  
+  On some small mobile screens, the hamburger icon does not align perfectly in the navbar.  
+  Despite this minor visual issue, the menu expands and collapses correctly and navigation works as expected.
 
 
 
 
+## Credits
 
-============================================================
+### Code and Learning
+- Code Institute walkthrough project *I Think Therefore I Blog* helped me understand how to set up Django, models, and CRUD.  
+- Django Cheat Sheet from Code Institute, used many MANY times to remind me of setup, models, forms, and deployment steps.  
+- QuickRef.me Django and Python cheatsheets, used for quick look-ups when I forgot syntax.    
+- YouTube tutorials, mainly about Python, Bootstrap, and forms, to understand things better.  
 
+### Media
+- Sora AI for some background images and placeholder pictures.  
+- WoW Fandom Wiki for Horde and Alliance logos.  
+- Fonts from Google Fonts (Cinzel).  
+
+### Acknowledgements
+- ChatGPT and Grok AI helped me understand code and explain errors in simple steps.  
+- World of Warcraft, Horde and Alliance are trademarks of Blizzard Entertainment. Logos are used only for this school project under fair use.  
+
+
+
+---
+## Author
+
+- Mathias Eriksson - [GitHub](https://github.com/mathiase4)
+
+## License
+
+This project is licensed under the MIT License.
 
 
 
