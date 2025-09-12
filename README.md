@@ -1,6 +1,6 @@
 # WoW Guild Recruitment
 
-A full-stack application for World Of Warcraft ("Video Game") players to find and recruit for guilds.
+A full-stack application for World Of Warcraft players to find and recruit for guilds.
 **This is Portfolio Project 3**
 
 ## Live Project Links
