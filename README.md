@@ -23,9 +23,10 @@ A full-stack application for World Of Warcraft ("Video Game") players to find an
 - [Environment Variables](#environment-variables)
 - [Running The Project Locally](#running-the-project-locally)
 - [Wireframes](#wireframes)
-- [Known Issues](#Known-Issues)
-- [Credits](#Credits)
-- [License](#License)
+- [Known Issues](#known-issues)
+- [Credits](#credits)
+- [Author](#author)
+- [License](#license)
 
 
 
